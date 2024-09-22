@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor Amarilla para el amor de mi vida</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+
+        .flor {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .petalo {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+
+        /* Pétalos alrededor */
+        .petalo:nth-child(1) { top: 0; left: 60px; }
+        .petalo:nth-child(2) { top: 20px; left: 120px; }
+        .petalo:nth-child(3) { top: 60px; left: 160px; }
+        .petalo:nth-child(4) { top: 120px; left: 120px; }
+        .petalo:nth-child(5) { top: 140px; left: 60px; }
+        .petalo:nth-child(6) { top: 120px; left: 0; }
+        .petalo:nth-child(7) { top: 60px; left: -20px; }
+        .petalo:nth-child(8) { top: 20px; left: 0; }
+
+        /* Centro de la flor */
+        .centro {
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            width: 80px;
+            height: 80px;
+            background-color: orange;
+            border-radius: 50%;
+        }
+
+        /* Animación para simular el dibujo de la flor */
+        .petalo, .centro {
+            opacity: 0;
+            animation: dibujar 2s ease-in-out forwards;
+        }
+
+        .petalo:nth-child(1) { animation-delay: 0.2s; }
+        .petalo:nth-child(2) { animation-delay: 0.4s; }
+        .petalo:nth-child(3) { animation-delay: 0.6s; }
+        .petalo:nth-child(4) { animation-delay: 0.8s; }
+        .petalo:nth-child(5) { animation-delay: 1s; }
+        .petalo:nth-child(6) { animation-delay: 1.2s; }
+        .petalo:nth-child(7) { animation-delay: 1.4s; }
+        .petalo:nth-child(8) { animation-delay: 1.6s; }
+        .centro { animation-delay: 1.8s; }
+
+        @keyframes dibujar {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flor">
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="centro"></div>
+    </div>
+</body>
+</html>
